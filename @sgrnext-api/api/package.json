@@ -1,0 +1,20 @@
+{
+  "name": "@sgrnext/api",
+  "version": "0.1.0",
+  "description": "Lightweight and developer-friendly library designed to simplify the creation of API handlers in Next.js applications",
+  "keywords": ["nextjs", "api", "handler", "server", "backend", "sugar"],
+  "homepage": "",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.js",
+  "files": [ "dist" ],
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "publish": "npm publish"
+  },
+  "peerDependencies": {
+    "next": "^15.0.0-0"
+  }
+}

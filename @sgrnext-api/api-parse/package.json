@@ -1,0 +1,19 @@
+{
+  "name": "@sgrnext/api-parse",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}
