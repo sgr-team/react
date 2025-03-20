@@ -20,8 +20,8 @@ export class Api {
 
     const response = await this.fetchFn(`${this.prefix}${url}`, options);
 
+    const text = await response.text();
     if (response.ok) {
-      const text = await response.text();
       if (text == null || text.length === 0) {
         return null as Res;
       }
@@ -29,8 +29,7 @@ export class Api {
       return JSON.parse(text) as Res;
     }
 
-    const message = await response.text();
-    throw new ApiError(response.status, message);
+    throw new ApiError(response.status, text);
   }
 
   async get<Res>(url: string, options: RequestInit = { }): Promise<Res> {

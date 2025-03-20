@@ -1,15 +1,20 @@
 {
   "name": "@sgrnext/api-parse",
   "version": "0.1.0",
+  "description": "The @sgrnext/api-parse plugin enhances the @sgrnext/api ecosystem by providing robust capabilities for parsing and validating requests from NextRequest objects",
+  "keywords": ["nextjs", "api", "handler", "server", "backend", "sugar", "parse", "validation", "zod", "request"],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-parse/introduction",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
   "main": "dist/index.js",
+  "files": [ "dist" ],
   "type": "module",
+  "private": false,
   "scripts": {
     "build": "tsup",
-    "test": "jest"
+    "test": "jest",
+    "npm-publish": "npm publish --access public"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "peerDependencies": {
     "@sgrnext/api": "^0.1.0"
   },

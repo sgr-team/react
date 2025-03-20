@@ -45,7 +45,7 @@ const config: Config = {
           label: 'Plugins',
         },
         {
-          href: 'https://github.com/sgrnext/api',
+          href: 'https://github.com/sgr-team/react',
           label: 'GitHub',
           position: 'right',
         },

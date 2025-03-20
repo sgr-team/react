@@ -1,9 +1,5 @@
 # @sgrnext/api-parse
 
-## Motivation
-
-
-
 ## Getting started
 
 ### Install
@@ -28,7 +24,7 @@ const handler = new HandlerFactory()
 // src/app/api/books/route.ts
 import { compileSchema } from '@sgrnext/api-parse';
 import { z } from "zod";
-import { handler } from '@/server/handler';
+import { handler } from '@/server/handlers';
 
 export POST = handler.create(async (env) => {
   const { title, price } = await env.parse(SCHEMA, ZOD_SCHEMA)

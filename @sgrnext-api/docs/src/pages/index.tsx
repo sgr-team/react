@@ -63,10 +63,10 @@ export default function Home(): ReactNode {
         </Box>
         <Tabs>
           <TabItem value="handler" label="Handler" default>
-            <CodeBlock language="typescript" title="src/app/api/books/[id]/route.ts">
+            <CodeBlock language="typescript" title="src/app/api/books/route.ts">
               {`import { compileSchema } from '@sgrnext/api-parse';
 import { z } from "zod";
-import { handlers } from '@/server/handler';
+import { handlers } from '@/server/handlers';
 
 export POST = handlers.create(async (env) => {
   const { title, price } = await env.parse(SCHEMA, ZOD_SCHEMA)

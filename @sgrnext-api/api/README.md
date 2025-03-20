@@ -3,6 +3,8 @@
 @sgrnext/api is a lightweight and developer-friendly library designed 
 to simplify the creation of API handlers in Next.js applications.
 
+See full [documentation](https://nextapi.sgr-team.dev).
+
 ## Motivaton
 
 The @sgrnext/api library simplifies API development by abstracting common, 
@@ -15,12 +17,6 @@ The plugin system in @sgrnext/api offers flexible customization of the handler e
 enabling developers to tailor it to their needs. Additionally, it supports the integration 
 of project-specific functionality, enhancing adaptability across diverse use cases.
 
-## Plugins
-
-| Plugin                      | Description                               |
-| --------------------------- | ----------------------------------------- |
-| @sgrnext/api-parse          | Request Parsing and Validation            |
-
 ## Getting started
 
 ### Install
@@ -32,11 +28,11 @@ npm install --save @sgrnext/api
 ### Crate handlers factory
 
 ```typescript
-// src/server/handle.ts
+// src/server/handlers.ts
 import { HandlerFactory } from '@sgrnext/api';
 import { parse } from "@sgrnext/api-parse";
 
-export const handler = new HandlerFactory()
+export const handlers = new HandlerFactory()
   // apply plugins
   .plugin({ pool: myDatabaseConnection })
   .plugin(parse())
@@ -50,9 +46,9 @@ export const handler = new HandlerFactory()
 // src/app/api/books/route.ts
 import { compileSchema } from '@sgrnext/api-parse';
 import { z } from "zod";
-import { handler } from '@/server/handler';
+import { handlers } from '@/server/handlers';
 
-export POST = handler.create(async (env) => {
+export POST = handlers.create(async (env) => {
   const { title, price } = await env.parse(SCHEMA, ZOD_SCHEMA)
   const { id } = await env.pool.execute('...', [ title, price ]);
 
