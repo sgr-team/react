@@ -41,15 +41,20 @@ The HandlerEnvironmentPluginFn type is defined with three generic type parameter
 ```typescript
 import { HandlerEnvironment, HandlerEnvironmentPluginFn } from "@sgrnext/api";
 
-let index = 0;
 
-export const indexed: HandlerEnvironmentPluginFn<
-  HandlerEnvironment, // From
-  { index: number }   // EnvDelta
-> = (env) => {
-  const resultEnv = env as HandlerEnvironment & { index: number };
-  resultEnv.index = index++;
+export const indexed = <
+  Env extends HandlerEnvironment
+>(): HandlerEnvironmentPluginFn<Env, IndexedDelta> => {
+  let index = 0;
+  
+  return (env) => {
+    const resultEnv = env as HandlerEnvironment & IndexedDelta;
+    resultEnv.index = index++;
 
-  return resultEnv;
+    return resultEnv;
+  }
 }
+
+
+export type IndexedDelta = { index: number; };
 ```

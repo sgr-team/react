@@ -15,7 +15,7 @@ nested structures.
 # Example
 
 ```typescript
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { 
     sessionId, // retrieves the value of the "my-header" header
     allHeaders // retrieves the entire headers object

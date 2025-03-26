@@ -22,7 +22,7 @@ Body
   "one": 1
 }
 */
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { 
     empty_str, // false
     zero,      // false

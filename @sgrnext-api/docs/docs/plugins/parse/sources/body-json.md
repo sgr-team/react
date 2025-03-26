@@ -29,7 +29,7 @@ Body
   }
 }
 */
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { 
     a,      // 1
     answer, // 42

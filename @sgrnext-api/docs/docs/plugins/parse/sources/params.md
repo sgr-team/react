@@ -15,7 +15,7 @@ allowing you to retrieve specific parameters or the entire params object.
 
 ```typescript title="src/app/api/books/[id]/route.ts"
 // URL: /api/books/123
-export GET = handlers.create(async (env) => {
+export const GET = handlers.create(async (env) => {
   const { 
     id, // 123,
     p   // { id: 123 }

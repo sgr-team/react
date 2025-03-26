@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "rootDir": "src",
+    "paths": {
+      "@": ["./src/index"],
+      "@/*": ["./src/*"]
+    },
+    "outDir": "dist",
+    "jsx": "react"
+  },
+  "include": ["src/**/*.ts", "src/Container.tsx"],
+  "exclude": ["node_modules"]
+}

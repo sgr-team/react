@@ -47,7 +47,7 @@ import { compileSchema } from '@sgrnext/api-parse';
 import { z } from "zod";
 import { handlers } from '@/server/handlers';
 
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { title, price } = await env.parse(SCHEMA, ZOD_SCHEMA)
   const { id } = await env.pool.execute('...', [ title, price ]);
 

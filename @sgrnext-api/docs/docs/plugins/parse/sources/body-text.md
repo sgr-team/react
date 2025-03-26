@@ -17,7 +17,7 @@ value without nested property navigation.
 Body
 42
 */
-export PUT = handlers.create(async (env) => {
+export const PUT = handlers.create(async (env) => {
   const { 
     price // 42
   } = await env.parse(SCHEMA, ZOD_SCHEMA);

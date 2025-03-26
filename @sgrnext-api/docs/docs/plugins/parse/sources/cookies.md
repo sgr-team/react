@@ -15,7 +15,7 @@ nested structures.
 # Example
 
 ```typescript
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { 
     sessionId, // retrieves the value of the "token-key" cookie
     allCookies // retrieves the entire cookies object

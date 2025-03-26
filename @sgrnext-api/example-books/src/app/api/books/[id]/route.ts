@@ -64,7 +64,7 @@ const PUT_SCHEMA = compileSchema({
 });
 
 const PUT_ZOD_SCHEMA = z.object({
-  id: z.number(),
+  id: z.number().int(),
   title: z.string(),
   author: z.string(),
   description: z.string()

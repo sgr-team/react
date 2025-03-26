@@ -47,7 +47,7 @@ export const handlers = new HandlerFactory()
 ## Use
 
 ```typescript title="src/app/api/books/route.ts"
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { title, price } = await env.parse(SCHEMA, ZOD_SCHEMA)
   const { id } = await env.pool.execute('...', [ title, price ]);
 

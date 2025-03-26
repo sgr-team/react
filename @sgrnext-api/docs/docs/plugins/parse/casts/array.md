@@ -22,7 +22,7 @@ Body
   "arr": [ 'a', 2 ]
 }
 */
-export POST = handlers.create(async (env) => {
+export const POST = handlers.create(async (env) => {
   const { 
     str, // [ 'str_exmlp' ]
     num, // [ 420 ]
