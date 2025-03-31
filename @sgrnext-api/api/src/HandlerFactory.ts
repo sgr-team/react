@@ -48,10 +48,10 @@ export class HandlerFactory<Env extends HandlerEnvironment = HandlerEnvironment>
     }
 
     if (result == null) {
-      return new NextResponse(null, { status: 200 });
+      return new Response(null, { status: 200 });
     }
 
-    if (result instanceof NextResponse) {
+    if (result instanceof Response) {
       return result;
     }
 

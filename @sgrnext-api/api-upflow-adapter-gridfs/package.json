@@ -1,0 +1,46 @@
+{
+  "name": "@sgrnext/api-upflow-adapter-gridfs",
+  "version": "0.1.0",
+  "description": "The @sgrnext/api-upflow-adapter-gridfs is an adapter for the @sgrnext/api-upflow plugin that stores files in GridFS",
+  "keywords": [
+    "nextjs",
+    "api",
+    "handler",
+    "server",
+    "backend",
+    "sugar",
+    "upload",
+    "file",
+    "multipart",
+    "request",
+    "mongodb",
+    "gridfs"
+  ],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-upflow/adapters/gridfs",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "upflow-adapter-tests",
+    "npm-publish": "npm publish --access public",
+    "dev-env": "npm run dev-env-up",
+    "dev-env-up": "docker compose up -d --wait",
+    "dev-env-down": "docker compose down",
+    "dev-env-clear": "npm run dev-env-down && rm -rf ./.local-data",
+    "dev-env-recreate": "npm run dev-env-clear && npm run dev-env-up"
+  },
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0",
+    "@sgrnext/api-upflow": "^0.1.0"
+  },
+  "devDependencies": {
+    "@sgrnext/api-upflow-adapter-tests": "^0.1.0"
+  },
+  "dependencies": {
+    "mongodb": "^6.15.0",
+    "uuid": "^11.1.0"
+  }
+}

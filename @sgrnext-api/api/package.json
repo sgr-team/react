@@ -6,7 +6,7 @@
   "homepage": "https://nextapi.sgr-team.dev",
   "license": "MIT",
   "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "files": [ "dist" ],
   "type": "module",
   "private": false,

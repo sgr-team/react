@@ -1,0 +1,13 @@
+services:
+  upflow-mongo:
+    container_name: "upflow-mongo"
+    hostname: menu- 
+    image: mongo:7.0.14-jammy
+    restart: no
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    volumes:
+      - ./.local-data/mongo:/data/db
+    ports:
+      - "11017:27017"

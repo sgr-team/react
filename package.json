@@ -1,7 +1,7 @@
 {
   "name": "@sgrteam/react",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.cjs",
   "workspaces": [
     "@sgreact-dialogs/*",
     "@sgrnext-api/*"
@@ -15,10 +15,13 @@
   "description": "",
   "dependencies": {
     "husky": "^9.1.7",
-    "jest": "^29.7.0",
     "lerna": "^8.2.1",
     "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

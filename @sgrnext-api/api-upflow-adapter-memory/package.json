@@ -1,0 +1,39 @@
+{
+  "name": "@sgrnext/api-upflow-adapter-memory",
+  "version": "0.1.0",
+  "description": "The @sgrnext/api-upflow-adapter-memory is an adapter for the @sgrnext/api-upflow plugin that stores files in memory",
+  "keywords": [
+    "nextjs",
+    "api",
+    "handler",
+    "server",
+    "backend",
+    "sugar",
+    "upload",
+    "file",
+    "multipart",
+    "request",
+    "memory"
+  ],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-upflow/adapters/memory",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "upflow-adapter-tests",
+    "npm-publish": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0",
+    "@sgrnext/api-upflow": "^0.1.0"
+  },
+  "devDependencies": {
+    "@sgrnext/api-upflow-adapter-tests": "^0.1.0"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}

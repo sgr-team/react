@@ -1,7 +1,7 @@
 {
-  "name": "@sgrnext/api-parse",
+  "name": "@sgrnext/api-upflow",
   "version": "0.1.0",
-  "description": "The @sgrnext/api-parse plugin enhances the @sgrnext/api ecosystem by providing robust capabilities for parsing and validating requests from NextRequest objects",
+  "description": "The @sgrnext/api-upflow plugin is a plugin for the @sgrnext/api plugin that adds support for file uploads",
   "keywords": [
     "nextjs",
     "api",
@@ -9,12 +9,12 @@
     "server",
     "backend",
     "sugar",
-    "parse",
-    "validation",
-    "zod",
+    "upload",
+    "file",
+    "multipart",
     "request"
   ],
-  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-parse/introduction",
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-upflow/introduction",
   "license": "MIT",
   "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
   "main": "dist/index.cjs",
@@ -30,9 +30,7 @@
   },
   "peerDependencies": {
     "@sgrnext/api": "^0.1.0",
+    "@sgrnext/api-upflow": "^0.1.0",
     "next": "^15.0.0-0"
-  },
-  "dependencies": {
-    "zod": "^3.24.2"
   }
 }

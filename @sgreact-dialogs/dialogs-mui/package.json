@@ -14,14 +14,13 @@
   "homepage": "https://react-dialogs.sgr-team.dev",
   "license": "MIT",
   "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "files": [
     "dist"
   ],
   "private": false,
   "scripts": {
     "build": "tsup",
-    "test": "jest",
     "npm-publish": "npm publish --access public"
   },
   "peerDependencies": {

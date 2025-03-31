@@ -53,6 +53,7 @@ function Demo() {
     () => dialogs.error('Error title', new Error('Error message')),
     [ dialogs ]
   );
+  
   return (
     <Box sx={{ mt: 2, width: '100%', display: 'flex', justifyContent: 'center' }}>
       <Box 
