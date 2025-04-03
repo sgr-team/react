@@ -25,6 +25,15 @@ sidebar_position: 0
         the extracted data with [zod](https://zod.dev/)
       </td>
     </tr>
+    <tr>
+      <td style={{ whiteSpace: 'nowrap' }}>
+        [@sgrnext/api-upflow](./upflow/index.md)
+      </td>
+      <td>
+        The plugin allows you to work with files, supports different adapters (memory/gridfs). 
+        It also allows you to flexibly take into limits
+      </td>
+    </tr>
   </tbody>
 </table>
 

@@ -8,7 +8,9 @@
   ],
   "scripts": {
     "test": "lerna run test",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "dev-env": "lerna run dev-env-up",
+    "dev-env-down": "lerna run dev-env-down"
   },
   "author": "",
   "license": "ISC",

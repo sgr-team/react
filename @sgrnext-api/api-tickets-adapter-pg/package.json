@@ -1,0 +1,41 @@
+{
+  "name": "@sgrnext/api-tickets-adapter-pg",
+  "version": "0.1.0",
+  "description": "The @sgrnext/api-tickets-adapter-pg is an postgres adapter for the @sgrnext/api-tickets plugin",
+  "keywords": [
+    "nextjs",
+    "api",
+    "handler",
+    "server",
+    "backend",
+    "sugar",
+    "upload",
+    "pg"
+  ],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-tickets/adapters/pg",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "tickets-adapter-tests",
+    "npm-publish": "npm publish --access public",
+    "dev-env": "npm run dev-env-up && npm run dev-env-migrate",
+    "dev-env-up": "docker compose up -d --wait",
+    "dev-env-down": "docker compose down",
+    "dev-env-clear": "npm run dev-env-down && rm -rf ./.local-data",
+    "dev-env-recreate": "npm run dev-env-clear && npm run dev-env-up"
+  },
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0",
+    "@sgrnext/api-tickets": "^0.1.0"
+  },
+  "devDependencies": {
+    "@sgrnext/api-tickets-adapter-tests": "^0.1.0"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}

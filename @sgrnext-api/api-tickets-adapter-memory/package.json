@@ -1,0 +1,39 @@
+{
+  "name": "@sgrnext/api-tickets-adapter-memory",
+  "version": "0.1.0",
+  "description": "The @sgrnext/api-tickets-adapter-memory is an adapter for the @sgrnext/api-tickets plugin",
+  "keywords": [
+    "nextjs",
+    "api",
+    "handler",
+    "server",
+    "backend",
+    "sugar",
+    "upload",
+    "file",
+    "multipart",
+    "request",
+    "memory"
+  ],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-tickets/adapters/memory",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "tickets-adapter-tests",
+    "npm-publish": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0",
+    "@sgrnext/api-tickets": "^0.1.0"
+  },
+  "devDependencies": {
+    "@sgrnext/api-tickets-adapter-tests": "^0.1.0"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}

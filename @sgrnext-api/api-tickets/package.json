@@ -1,0 +1,36 @@
+{
+  "name": "@sgrnext/api-tickets",
+  "version": "0.1.0",
+  "description": "The @sgrnext/api-tickets plugin is a plugin for the @sgrnext/api plugin that adds support tickets logic",
+  "keywords": [
+    "nextjs",
+    "api",
+    "handler",
+    "server",
+    "backend",
+    "sugar",
+    "tickets",
+    "request"
+  ],
+  "homepage": "https://nextapi.sgr-team.dev/docs/plugins/@sgrnext/api-tickets/introduction",
+  "license": "MIT",
+  "author": "Dmitry Balakov <balakovdmitry@gmail.com>",
+  "main": "dist/index.cjs",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "build": "tsup",
+    "test": "jest",
+    "npm-publish": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "@sgrnext/api": "^0.1.0",
+    "next": "^15.0.0-0"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
+  }
+}
